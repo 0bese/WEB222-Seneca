@@ -1,0 +1,11 @@
+
+> web222-assignment-2@7.0.0 eslint
+> eslint src/**/*.js
+
+
+/Users/computer/Documents/GitHub/WEB222-Seneca/a2/src/observations.js
+   18:9   error    'results' is assigned a value but never used  no-unused-vars
+  656:28  warning  Expected '!==' and instead saw '!='           eqeqeq
+
+✖ 2 problems (1 error, 1 warning)
+
