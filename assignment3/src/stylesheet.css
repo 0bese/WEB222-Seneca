@@ -76,6 +76,34 @@ section nav .icon i {
 section nav .icon i:hover {
   color: #fbc252;
 }
+
+section .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 130px;
+}
+
+section .main .main_text h1 {
+  font-size: 60px;
+  position: relative;
+  top: -90px;
+  left: 20px;
+}
+section .main .main_text h1 span {
+  margin-left: 15px;
+  color: #fbc252;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif; /*TBD*/
+  line-height: 22px;
+  font-size: 70px;
+}
+
+section .main .main_image img {
+  width: 700px;
+}
+
 #img1 {
   width: 100%;
   height: 50%;
