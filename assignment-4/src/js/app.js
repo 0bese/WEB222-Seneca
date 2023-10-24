@@ -10,7 +10,7 @@
  *
  *      Name:       <KOJO ANYANE OBESE>
  *      Student ID: <137653226>
- *      Date:       <3RD NOVEMBER 2023>
+ *      Date:       <23RD OCTOBER 2023>
  */
 
 // All of our data is available on the global `window` object.
