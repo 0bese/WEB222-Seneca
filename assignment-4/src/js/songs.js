@@ -12,7 +12,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Bossy",
     year : "2016",
-    duration : 310,
+    duration : 316,
     url : "https://youtu.be/HiaMW7Vq_lw?si=hcnsGdxeDhUQJIwe",
     explicit : true
   },
@@ -21,7 +21,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Take it back",
     year : "2016",
-    duration : 140,
+    duration : 154,
     url : "https://youtu.be/jxKox9MgDDE?si=9i8KIc25gzgHfQ-Y",
     explicit : true
   },
@@ -30,7 +30,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Better Days",
     year : "2022",
-    duration : 244,
+    duration : 246,
     url : "https://youtu.be/nSktAGGjBas?si=_8R8iY67tO49rZuY",
     explicit : true
   },
@@ -39,7 +39,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Coachella",
     year : "2021",
-    duration : 186,
+    duration : 190,
     url : "https://youtu.be/wW8BN2YPjEQ?si=WTEgFNU6yvfWMGOw",
     explicit : true
   },
@@ -48,7 +48,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Country Side",
     year : "2023",
-    duration : 195,
+    duration : 205,
     url : "https://youtu.be/HVXaDZWF208?si=l8iWvnvb-2c_o4R7",
     explicit : true
   },
@@ -66,7 +66,7 @@ window.songs = [
     artistId : "AID-0233",
     title : "Rollies and Cigars",
     year : "2021",
-    duration : 213,
+    duration : 235,
     url : "https://youtu.be/DP2_6uTtUuU?si=2J-xT_eXEgW8fITv",
     explicit : true
   },
@@ -76,7 +76,7 @@ window.songs = [
     artistId : "AID-0331",
     title : "Simmer Down",
     year : "2023",
-    duration : 182,
+    duration : 181,
     url : "https://youtu.be/7a34tgFDonI?si=CeJS883yDt3TsL7U",
     explicit : true
   },
@@ -94,7 +94,7 @@ window.songs = [
     artistId : "AID-0331",
     title : "Kwaku the Traveller",
     year : "2022",
-    duration : 199,
+    duration : 212,
     url : "https://youtu.be/GIDiI5kyBDQ?si=IJj3i-mGpFXrjaGB",
     explicit : true
   },
@@ -103,7 +103,7 @@ window.songs = [
     artistId : "AID-0331",
     title : "Oil In My Head",
     year : "2023",
-    duration : 183,
+    duration : 185,
     url : "https://youtu.be/uwojeKVV7Dk?si=-LWYQaGuqE4Ucz55",
     explicit : true
   },
@@ -119,7 +119,7 @@ window.songs = [
   {
     songID: "SID-1166",
     artistId : "AID-0331",
-    title : "Second Sermon",
+    title : "Second Sermon (Remix)",
     year : "2022",
     duration : 199,
     url : "https://youtu.be/cPf8LT2uNbs?si=vkFTZjeCPwGy2eeO",
@@ -130,7 +130,7 @@ window.songs = [
     artistId : "AID-0331",
     title : "Konongo Zongo",
     year : "2022",
-    duration : 202,
+    duration : 185,
     url : "https://youtu.be/BtJQX53Syec?si=sSDtNdj5jxecPq2n",
     explicit : true
   },
@@ -140,7 +140,7 @@ window.songs = [
     artistId : "AID-0635",
     title : "Pain Interlude",
     year : "2023",
-    duration : 205,
+    duration : 185,
     url : "https://youtu.be/Ar2oStMGGFE?si=-YRceF0CNJACSJ8F",
     explicit : true
   },
@@ -197,5 +197,5 @@ window.songs = [
     duration : 194,
     url : "https://youtu.be/WHVSy7jZ6uI?si=YWgn4VSqalkFo3K8",
     explicit : true
-  },
+  }
 ];
