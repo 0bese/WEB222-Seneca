@@ -1,4 +1,23 @@
+/**
+ * WEB222 – Assignment 05
+ *
+ * I declare that this assignment is my own work in accordance with
+ * Seneca Academic Policy. No part of this assignment has been
+ * copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Please update the following with your information:
+ *
+ *      Name:       <KOJO ANYANE OBESE>
+ *      Student ID: <137653226>
+ *      Date:       <23RD OCTOBER 2023>
+ */
+
+// All of our data is available on the global `window` object.
+// Create local variables to work with it in this file.
+const { artists, songs } = window;
 document.addEventListener("DOMContentLoaded", () => {
+  
     function displayArtists() {
       const menu = document.querySelector("#menu");
       artists.forEach((artist, index) => {
@@ -29,10 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const card = document.createElement("div");
           card.className = "card";
   
-          const img = document.createElement("img");
-          img.src = song.UrlImage;
-          img.alt = song.title;
+          const img = document.createElement("div");
+          img.className = "image-box";
+          img.innerHTML = `<img src = "${song.UrlImage}" alt="${song.title}" >`;
           card.appendChild(img);
+
+          const play = document.createElement("div");
+          play.className = "icon-box";
+          play.innerHTML =`<i class="fa-solid fa-play"></i>`;
+          card.appendChild(play);
   
           const name = document.createElement("div");
           name.className = "name";

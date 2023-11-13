@@ -1,4 +1,4 @@
-
+/*Element Area*/
 body {
     padding: 1.5rem;
 }
@@ -17,8 +17,10 @@ h2 {
 h3 {
     margin: 0;
     padding: 0;
+    font-size: small;
 }
 
+/* Id Area */
 #container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -31,7 +33,6 @@ h3 {
 .card {
     width: 13rem;
     background-color: #122029;
-    border: 1px solid #333;
     padding: 16px;
     border-radius: 15px;
     transition: all 0.38s ease;
@@ -39,20 +40,42 @@ h3 {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     cursor: pointer;
     border: rgb(23, 115, 92) 1px solid;
     box-shadow: #2c8479 2px 2px 10px, #333333a4 2px 2px 10px, #333 2px 2px 10px
 }
 
+.card:active {
+    transform: translateY(1px);
+}
+
 .name {
-    font-size: 1.5em;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 800;
     margin-top: 1em;
 }
 
-.card-details {
-    padding: 0.3em;
+.card h3 {
+    font-size: medium;
+    color: #508a84;
+}
+.card h2 {
+    color: #d9fffb;
 }
 
+.icon-box {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    top: 53%;
+    right: 12%;
+}
+
+.card:hover .fa-play{
+    visibility: visible;
+    font-size: 2.5rem;
+    color: #14c38e;
+}
 
