@@ -20,6 +20,10 @@ h3 {
     font-size: small;
 }
 
+footer {
+    text-align: center;
+}
+
 /* Id Area */
 #container {
     display: grid;
@@ -69,7 +73,7 @@ h3 {
     padding: 0;
     position: absolute;
     visibility: hidden;
-    top: 53%;
+    top: 50%;
     right: 12%;
 }
 
@@ -78,4 +82,16 @@ h3 {
     font-size: 2.5rem;
     color: #14c38e;
 }
+
+.year-duration{
+    color: #d9fffb;
+    display: flex;   
+}
+
+.duration {
+    color: #d9fffb;
+    margin-left: auto;
+}
+
+
 

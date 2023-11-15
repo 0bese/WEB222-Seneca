@@ -39,29 +39,53 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // New function to display cards for the selected artist's songs
     function displaySongs(artist) {
+      //Container for cards
       const container = document.querySelector("#container");
       container.innerHTML = "";
-  
+
+      //Creating a card for each song based on the artist
       songs
         .filter((song) => song.artistId === artist.artistId)
         .forEach((song) => {
+          //Main card
           const card = document.createElement("div");
           card.className = "card";
-  
+          
+          //Image on each card based on the song
           const img = document.createElement("div");
           img.className = "image-box";
           img.innerHTML = `<img src = "${song.UrlImage}" alt="${song.title}" >`;
           card.appendChild(img);
 
+          //The play icon that appears during hover
           const play = document.createElement("div");
           play.className = "icon-box";
           play.innerHTML =`<i class="fa-solid fa-play"></i>`;
           card.appendChild(play);
   
+          //Display song name
           const name = document.createElement("div");
           name.className = "name";
           name.innerHTML = `<h2>${song.title}</h2>`;
           card.appendChild(name);
+
+          //Creating the container to display year and duration of song
+          const yearDuration = document.createElement("div");
+          yearDuration.className = "year-duration"
+
+          //Year of song container
+          const year = document.createElement("div");
+          year.className = "year";
+          year.innerHTML = `${song.year}`;
+          yearDuration.appendChild(year);
+
+          //Duration of song container
+          const duration = document.createElement("div");
+          duration.className = "duration";
+          duration.innerHTML = `${Math.floor(song.duration / 60)}:${(song.duration % 60).toString().padStart(2, "0")}`;
+          yearDuration.appendChild(duration);
+          //Append year and duration container
+          card.appendChild(yearDuration);
   
           const details = document.createElement("h3");
         //   details.className = "card-details";
