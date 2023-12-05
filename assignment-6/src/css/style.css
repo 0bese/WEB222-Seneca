@@ -1,0 +1,126 @@
+/*Element Area*/
+body {
+  padding: 1.5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+
+h2 {
+  margin: 1rem 0rem 0rem 0rem;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: small;
+}
+
+footer {
+  text-align: center;
+}
+
+input{
+  text-align: center;
+}
+
+/* Id Area */
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  max-width: 80vw;
+  margin: 0 auto;
+  margin-top: 5vh;
+  gap: 1em;
+}
+
+#newss {
+  text-align: center;
+}
+
+#email::placeholder {
+  text-align: center;
+  opacity: 0.3;
+}
+
+
+.card {
+  width: 13rem;
+  background-color: #122029;
+  padding: 16px;
+  border-radius: 15px;
+  transition: all 0.38s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  border: rgb(23, 115, 92) 1px solid;
+  box-shadow:
+    #2c8479 2px 2px 10px,
+    #333333a4 2px 2px 10px,
+    #333 2px 2px 10px;
+}
+
+.card:active {
+  transform: translateY(1px);
+}
+
+.name {
+  font-size: 1em;
+  font-weight: 800;
+  margin-top: 1em;
+}
+
+.card h3 {
+  font-size: medium;
+  color: #508a84;
+}
+.card h2 {
+  color: #d9fffb;
+}
+
+.icon-box {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  right: 12%;
+}
+
+.card:hover .fa-play {
+  visibility: visible;
+  font-size: 2.5rem;
+  color: #14c38e;
+}
+
+.year-duration {
+  color: #d9fffb;
+  display: flex;
+}
+
+.duration {
+  color: #d9fffb;
+  margin-left: auto;
+}
+
+.request-artist {
+  margin-top: 10px;
+}
+.request {
+  
+}
+.news{
+  display: grid;
+}
+
+
+
+
+
+
