@@ -1,76 +1,89 @@
 <!doctype html>
 <html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=500, initial-scale=1" />
+    <!-- Change this to your name-->
+    <meta name="author" content="Kojo Anyane Obese" />
 
-  <!-- Change this to your name-->
-  <meta name="author" content="Kojo Anyane Obese" />
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./css/water.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-  <title>WEB222 Music App</title>
-  <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
-  <link rel="stylesheet" href="./css/water.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
+  <body>
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>MUS1C 4PP</h1>
+      <p>Unlock The Rhythm, Anytime, Anywhere</p>
+    </header>
 
-<body>
-  <header>
-    <!-- Change this to your App's info -->
-    <h1>MUS1C 4PP</h1>
-    <p>Unlock The Rhythm, Anytime, Anywhere</p>
-  </header>
+    <nav id="menu">
+      <!-- Dynamically create your menu category buttons here -->
+    </nav>
 
-  <nav id="menu">
-    <!-- Dynamically create your menu category buttons here -->
-  </nav>
+    <hr />
 
-  <hr />
+    <main>
+      <h2 id="selected-artist">
+        <!-- Dynamically update the selected category title -->
+      </h2>
 
-  <main>
-    <h2 id="selected-artist">
-      <!-- Dynamically update the selected category title -->
-    </h2>
-
-    <div id="container">
-      <!-- Dynamically create card & card content -->
-    </div>
-
-    <form id="request"  class="request-artist">
-      <div>
-      <fieldset>
-        <button class="request">Request A New Artist</button>
-      </fieldset>
+      <div id="container">
+        <!-- Dynamically create card & card content -->
       </div>
 
-      <div class="newsletter">
-        <form action="" class="news-letter">
+      <form id="request" class="request-artist">
+        <div>
           <fieldset>
-            <div class="news">
-            <label for="newsletter" id="newss"><h2>Join our newsletter</h2><p>get weekly access to our best deals</p></label>
-            <input type="text" id="email" name="Email" placeholder="Enter your email">
-            <input type="submit" id="subscribe" value="Subscribe" />
-          </div>
+            <button
+              type="button"
+              class="requestB"
+              id="request-artist-button"
+              onclick="window.location.href='request-artist.html';"
+            >
+              Request New Artist
+            </button>
           </fieldset>
-        </form>
-      </div>
-  </main>
+        </div>
+      </form>
+    </main>
 
-  <!-- JavaScript Data Files -->
-  <script src="./js/artists.js"></script>
-  <script src="./js/songs.js"></script>
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
 
-  <!-- Main App JavaScript File -->
-  <script src="./js/app.js"></script>
-</body>
-<footer>
-  <p>
-    Images on this site were from
-    <a href="https://soundcloud.com/">SoundCloud<i class="fa-brands fa-soundcloud"></i></a>
-  </p>
-</footer>
-
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+  <footer>
+    <fieldset>
+      <form action="https://httpbin.org/post" method="post">
+        <label for="newsletter-email">Subscribe to Our Newsletter:</label>
+        <input
+          type="email"
+          id="newsletter-email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </fieldset>
+    <p>
+      Images on this site were from
+      <a href="https://soundcloud.com/"
+        >SoundCloud<i class="fa-brands fa-soundcloud"></i
+      ></a>
+    </p>
+  </footer>
 </html>

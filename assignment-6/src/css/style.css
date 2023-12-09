@@ -23,9 +23,28 @@ h3 {
 footer {
   text-align: center;
 }
+#request-form-container button {
+  width: 100%;
+}
 
-input{
-  text-align: center;
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="datetime"],
+input[type="url"],
+select {
+  width: 100%;
+  padding: 0.5em 1.2em;
+  margin-bottom: 1em;
+  display: block;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 100%;
+  padding: 0.5em 1.2em;
+  margin: 0.5em 0;
 }
 
 /* Id Area */
@@ -38,16 +57,21 @@ input{
   gap: 1em;
 }
 
-#newss {
+#newsletter-email {
   text-align: center;
 }
 
-#email::placeholder {
+#newsletter-email::placeholder {
   text-align: center;
   opacity: 0.3;
 }
 
+#email {
+  text-align: center;
+  margin: 0;
+}
 
+/*Class Area*/
 .card {
   width: 13rem;
   background-color: #122029;
@@ -112,15 +136,10 @@ input{
 .request-artist {
   margin-top: 10px;
 }
-.request {
-  
+.requestB {
+  display: block;
+  margin: auto;
 }
-.news{
+.news {
   display: grid;
 }
-
-
-
-
-
-

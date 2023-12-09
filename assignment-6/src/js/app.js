@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
     displaySongs(artist);
   }
 
+  /*  // Redirect to request-artist.html
+  const requestArtistButton = document.getElementById('request-artist-button');
+  requestArtistButton.addEventListener('click', function() {
+  window.location.href = 'request-artist.html'; 
+}); */
+
   // New function to display cards for the selected artist's songs
   function displaySongs(artist) {
     //Container for cards
@@ -81,7 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
         //Duration of song container
         const duration = document.createElement("div");
         duration.className = "duration";
-        duration.innerHTML = `${Math.floor(song.duration / 60)}:${(song.duration % 60)
+        duration.innerHTML = `${Math.floor(song.duration / 60)}:${(
+          song.duration % 60
+        )
           .toString()
           .padStart(2, "0")}`;
         yearDuration.appendChild(duration);
@@ -98,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(card);
       });
   }
-
   displayArtists();
 });
 

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Artist</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./css/water.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <article id="request-form-container">
+      <header>
+        <!-- Change this to your App's info -->
+        <h1>MUS1C 4PP</h1>
+        <p>Unlock The Rhythm, Anytime, Anywhere</p>
+      </header>
+      <hr />
+      <h2>Request A New Artist</h2>
+
+      <form id="request-form" action="https://httpbin.org/post" method="post">
+        <label for="artist-name"
+          ><i class="fa-solid fa-user fa-xs theme"></i> &nbsp;Artist's Name<span
+            >*</span
+          ></label
+        >
+        <input type="text" id="artist-name" name="artist-name" required />
+
+        <label for="genre"
+          ><i class="fa-solid fa-music"></i> &nbsp;Music Genre<span
+            >*</span
+          ></label
+        >
+        <input type="text" list="genres" id="genre" name="genre" required />
+        <datalist id="genres">
+          <option value="Hip-Hop"></option>
+          <option value="Afro"></option>
+          <option value="Reggae"></option>
+          <option value="Country"></option>
+          <option value="Punk"></option>
+          <option value="Rock"></option>
+          <option value="Blues"></option>
+          <option value="other"></option>
+        </datalist>
+
+        <label for="year"
+          ><i class="fa-solid fa-calendar-days"></i> &nbsp;Year<span
+            >*</span
+          ></label
+        >
+        <input
+          type="number"
+          id="year"
+          name="year"
+          placeholder="e.g., 2023"
+          required
+        />
+
+        <label for="duration"
+          ><i class="fa-regular fa-clock"></i> &nbsp;Duration</label
+        >
+        <input
+          type="text"
+          id="duration"
+          name="duration"
+          placeholder="e.g., 3:00"
+        />
+
+        <label for="socials"
+          ><i class="fa-solid fa-share-nodes"></i> &nbsp;Social Media
+          URLs</label
+        >
+        <input
+          type="url"
+          id="socials"
+          name="socials"
+          placeholder="https://example.com"
+        />
+
+        <label for="songs"
+          ><i class="fa-solid fa-video"></i> &nbsp;Song/Video URLs<span
+            >*</span
+          ></label
+        >
+        <div id="song-video-urls-container">
+          <input
+            type="url"
+            name="song-video-urls[]"
+            placeholder="https://example.com"
+            required
+          />
+        </div>
+        <button type="button" id="add-song-video-url">Add New URL</button>
+        <br />
+        <label for="explicit"
+          ><i class="fa-solid fa-e"></i> &nbsp; Explicit:</label
+        >
+        <input type="checkbox" id="explicit" name="explicit" />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <button onclick="window.location.href='index.html';">
+        Return to Homepage
+      </button>
+      <span class="theme">*</span>
+      <span style="font-size: 0.89em">Required</span>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("request-form");
+          form.addEventListener("submit", function (event) {
+            const year = document.getElementById("year").value;
+            const duration = document.getElementById("duration").value;
+
+            // Validate year
+            const currentYear = new Date().getFullYear();
+            if (year < 1900 || year > currentYear) {
+              alert(
+                "Please enter a valid year between 1900 and " + currentYear,
+              );
+              event.preventDefault(); // Prevent form submission
+              return;
+            }
+
+            // Validate duration
+            if (!/^\d{1,2}:\d{2}$/.test(duration)) {
+              alert("Please enter the duration in the format mm:ss");
+              event.preventDefault(); // Prevent form submission
+              return;
+            }
+
+            // Additional validation for mm:ss format
+            const durationParts = duration.split(":");
+            if (
+              parseInt(durationParts[0]) > 59 ||
+              parseInt(durationParts[1]) > 59
+            ) {
+              alert(
+                "Please enter a valid duration (minutes and seconds should be less than 60)",
+              );
+              event.preventDefault();
+            }
+          });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("add-song-video-url")
+            .addEventListener("click", function (event) {
+              event.preventDefault();
+
+              const container = document.getElementById(
+                "song-video-urls-container",
+              );
+              const inputWrapper = document.createElement("div");
+              const newInput = document.createElement("input");
+              const deleteButton = document.createElement("button");
+
+              newInput.type = "url";
+              newInput.name = "song-video-urls";
+              newInput.placeholder = "https://example.com";
+              newInput.required = true;
+
+              deleteButton.textContent = "Delete";
+              deleteButton.type = "button";
+              deleteButton.addEventListener("click", function () {
+                container.removeChild(inputWrapper);
+              });
+
+              inputWrapper.appendChild(newInput);
+              inputWrapper.appendChild(deleteButton);
+              container.appendChild(inputWrapper);
+            });
+        });
+      </script>
+    </article>
+  </body>
+</html>
